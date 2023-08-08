@@ -8,7 +8,7 @@ public class FinishLine : MonoBehaviour
     {
         if(col.rigidbody.CompareTag("Player"))
         {
-            GameManager.Instance.Win();
+            //GameManager.Instance.Win();
         } 
     }
 }

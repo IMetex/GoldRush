@@ -139,7 +139,7 @@ TextureImporter:
         width: 308
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 89, y: 38, z: 31, w: 30}
       outline: []
       physicsShape: []
@@ -147,6 +147,111 @@ TextureImporter:
       bones: []
       spriteID: 3818ae10fa6788f44a870708dd3a26a8
       internalID: 351905281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lose_Background
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 261
+        width: 593
+        height: 676
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 90, y: 90, z: 83, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74d531676edb9b4d9525373fe1417d6
+      internalID: 2097032782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lost_background
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1329
+        width: 594
+        height: 763
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 82, y: 123, z: 105, w: 94}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902895aac8ae29c43851a8a685a5e47a
+      internalID: 1751936438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 2150
+        width: 607
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 304, y: 0, z: 280, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ee63a72afa4d941bb03b61a6f169ea
+      internalID: 217002945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_money
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 787
+        width: 284
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a8f0a3ce984b843a16de6f5666c383
+      internalID: -88602356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_star
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 653
+        width: 301
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0a5c31e37351048a5fcc9340452456
+      internalID: 1067198871
       vertices: []
       indices: 
       edges: []
@@ -164,6 +269,11 @@ TextureImporter:
     nameFileIdTable:
       Gold_BackGround2: 351905281
       Gold_Background: 739859263
+      Lose_Background: 2097032782
+      Lost_background: 1751936438
+      banner: 217002945
+      lost_money: -88602356
+      lost_star: 1067198871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

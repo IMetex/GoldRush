@@ -10,12 +10,12 @@ public abstract class Collectable : MonoBehaviour
     {
         if(other.attachedRigidbody.CompareTag("Player"))
         {
-            OnCollected();
+            OnCollected(other.gameObject);
             gameObject.SetActive(false);
         }
 
     }
 
-    protected abstract void OnCollected();
+    protected abstract void OnCollected(GameObject collectedBy);
 
 }

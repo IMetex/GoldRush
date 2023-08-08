@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    [SerializeField] private PlayerMovement playerMovement; 
+    [SerializeField] private PlayerMovement playerMovement;
 
     public static GameManager Instance
     {
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         EndGame();
-        GameLost?.Invoke(); 
+        GameLost?.Invoke();
     }
 
     public event Action<int> GoldChanged;
@@ -51,9 +51,10 @@ public class GameManager : MonoBehaviour
 
     public event Action GameEnded;
 
-    public event Action GameLost;    
+    public event Action GameLost;
 
     private int _gold;
+    public float GoldMultiplier { get; set; } = 1;
     public int Gold
     {
         get => _gold;

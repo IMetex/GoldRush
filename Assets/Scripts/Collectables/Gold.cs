@@ -7,6 +7,7 @@ public class Gold : Collectible
     protected override void OnCollected()
     {
         // TODO Increment player gold
+        GameInstance.Instance.Gold++;
         
     }
 }

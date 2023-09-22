@@ -4,16 +4,19 @@ using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collider.attachedRigidbody.CompareTag("Player"))
+        if (other.attachedRigidbody.CompareTag("Player"))
         {
             OnCollected();
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     protected abstract void OnCollected();
 
     // protected virtual void OnCollectedVirtual() {}
   
+
 
 }

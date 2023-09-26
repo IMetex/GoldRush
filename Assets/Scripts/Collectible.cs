@@ -8,12 +8,12 @@ public abstract class Collectible : MonoBehaviour
     {
         if (other.attachedRigidbody.CompareTag("Player"))
         {
-            OnCollected();
+            OnCollected(other.gameObject);
             //Destroy(gameObject);
             gameObject.SetActive(false);
         }
     }
-    protected abstract void OnCollected();
+    protected abstract void OnCollected(GameObject collectedBy);
 
     // protected virtual void OnCollectedVirtual() {}
   

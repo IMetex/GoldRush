@@ -9,13 +9,12 @@ public class UIPageController : MonoBehaviour
     [SerializeField] private GameObject _winPage;
     [SerializeField] private GameObject _losePage;
 
-
-    private void Start()
+ void Start()
     {
         _menuPage.SetActive(true);
 
     }
-
+  
     private void OnEnable()
     {
         GameInstance.Instance.GameStarted += OnGameStarted;

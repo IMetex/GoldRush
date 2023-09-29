@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BoosterContanier : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class BoosterContanier : MonoBehaviour
         var boosterInstance = new BoosterInstance(booster);
         _activeBoosters.Add(boosterInstance);
         booster.OnAdded(this);
+        BoosterAdded?.Invoke(boosterInstance);
     }
 
     public void RemoveBooster(Booster booster)
@@ -46,6 +48,7 @@ public class BoosterContanier : MonoBehaviour
             {
                 instance.Booster.OnRemoved(this);
                 _activeBoosters.RemoveAt(i);
+                BoosterRemoved?.Invoke(instance.Booster);
             }
         }
     }

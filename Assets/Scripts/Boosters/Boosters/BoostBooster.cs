@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Booster/Boost")]
+[CreateAssetMenu(menuName = "Boosters/Boost")]
 public class BoostBooster : Booster
 {
     [SerializeField] private float _multiplier = 2f;

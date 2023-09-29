@@ -5,6 +5,9 @@ using UnityEngine;
 public class BoosterContanier : MonoBehaviour
 {
     public List<BoosterInstance> _activeBoosters = new List<BoosterInstance>();
+    public event Action<BoosterInstance> BoosterAdded;
+    public event Action<Booster> BoosterRemoved;
+
     public void AddBooster(Booster booster)
     {
         foreach (var instance in _activeBoosters)

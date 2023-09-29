@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagnetBooster : MonoBehaviour
+[CreateAssetMenu(menuName = "Boosters/Magnet")]
+public class MagnetBooster : Booster
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField, Tooltip("How far should the magnet pull the golds.")] 
+    private float _radius = 10;
+    public override void OnAdded(BoosterContanier container)
     {
-        
+        var attactor = container.gameObject.AddComponent<MagnetAttactor>();
+        attactor.Radius = _radius; 
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public override void OnRemoved(BoosterContanier container)
     {
-        
+        Destroy(container.GetComponent<MagnetAttactor>());
     }
+
 }

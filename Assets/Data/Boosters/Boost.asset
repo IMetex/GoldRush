@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec527a5552b63ca49af297589c60d7c7, type: 3}
   m_Name: Boost
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 1a9783f20037337b8aaf288e55e5b58a, type: 3}
   _duration: 10
+  _multiplier: 2

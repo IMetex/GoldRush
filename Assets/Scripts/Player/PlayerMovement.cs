@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Speed Values")]
-    [SerializeField] private float _forwardSpeed;
+    [Header("Speed Values")] [SerializeField]
+    private float _forwardSpeed;
+
     [SerializeField] private float _horizontalSpeed;
 
-    [Header("Jump Value")]
-    [SerializeField] private float _jumpPower;
+    [Header("Jump Value")] [SerializeField]
+    private float _jumpPower;
 
     public float JumpPower
     {
@@ -17,18 +20,23 @@ public class PlayerMovement : MonoBehaviour
         set => _jumpPower = value;
     }
 
-    [Header("Horizontal Distance Value")]
-    [SerializeField] private float _maxHorizontalDistance;
+    public event Action Jumped;
+    public Vector3 Velocity => _rigidbody.velocity;
+
+    [Header("Horizontal Distance Value")] [SerializeField]
+    private float _maxHorizontalDistance;
 
     private Rigidbody _rigidbody;
     private Vector3 _velocity = new(); // or new Vector3();
     private bool _isGrounded;
+    public bool IsGrounded => _isGrounded;
 
 
     private void Awake()
     {
         GetReferances();
     }
+
     private void GetReferances()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -59,11 +67,13 @@ public class PlayerMovement : MonoBehaviour
         _velocity.y = _rigidbody.velocity.y;
         _velocity.z = _forwardSpeed; // player forward movement
     }
+
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _velocity.y = _jumpPower;
+            Jumped?.Invoke();
             //_rigidbody.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
             _isGrounded = false;
         }
@@ -79,9 +89,10 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody.position = clampedPosition;
         }
     }
+
     private void GroundCheck()
     {
-        _isGrounded = Physics.Raycast(_rigidbody.position, Vector3.down, 1.05f);
-        Debug.DrawRay(_rigidbody.position, Vector3.down * 1.05f, Color.red);
+        _isGrounded = Physics.Raycast(_rigidbody.position + Vector3.up, Vector3.down, 1.05f);
+        Debug.DrawRay(_rigidbody.position + Vector3.up, Vector3.down * 1.05f, Color.red);
     }
 }

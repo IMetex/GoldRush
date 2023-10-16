@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ff020356896b441b85bf32d9614482, type: 3}
   m_Name: DoubleGold
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 7051f5c105b5f6944a60f2b97d17fe74, type: 3}
   _duration: 10

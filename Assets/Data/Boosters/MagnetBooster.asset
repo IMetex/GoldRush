@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca33d9d68645977448b6c99f4effe165, type: 3}
   m_Name: MagnetBooster
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 32e3bb729826a882ca3212ba75d433c4, type: 3}
   _duration: 10
+  _radius: 10

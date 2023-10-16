@@ -53,8 +53,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.1002789
-  m_Center: {x: 0, y: 0.69697094, z: 0}
+  m_Radius: 1.599949
+  m_Center: {x: -0.3170432, y: 0.4547752, z: 0}
 --- !u!114 &2962166224877568462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +126,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 172039dc7ae0771469c4bb6eaf0f16b9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a88020e8b1755664791deca90e5350c2, type: 2}
     - target: {fileID: 919132149155446097, guid: 172039dc7ae0771469c4bb6eaf0f16b9,
         type: 3}
       propertyPath: m_Name

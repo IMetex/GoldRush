@@ -6,6 +6,8 @@ using UnityEngine;
 public class Gold : Collectible
 {
     [SerializeField] private Transform _graphics;
+    [SerializeField] private ParticleSystem _collectPartical;
+
 
     protected override void OnCollected(GameObject collectedBy)
     {
@@ -15,7 +17,12 @@ public class Gold : Collectible
         _graphics.DOKill();
         _graphics.SetParent(null);
         
-        _graphics.DOMoveY(_graphics.position.y + 5, .2f)
+        _graphics.DOMoveY(_graphics.position.y + 8f, .2f)
             .OnComplete(() => Destroy(_graphics.gameObject));
+
+        _graphics.DOScale(0.5f, 0.2f);
+
+        Instantiate(_collectPartical, transform.position, Quaternion.identity);
+
     }
 }

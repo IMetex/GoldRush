@@ -13,7 +13,7 @@ public class Obstacle : MonoBehaviour
             var hitNormal = collision.GetContact(0).normal;
             var hitDot = Vector3.Dot(hitNormal, Vector3.forward);
 
-            if (hitDot > 0.99f)
+            if (hitDot > 0.2f)
             {
                 GameInstance.Instance.Lose();
             }

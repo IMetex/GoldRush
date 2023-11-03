@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,5 +15,10 @@ public class CoinIdleAnimation : MonoBehaviour
         transform.DORotate(Vector3.up * 360, 2f, RotateMode.WorldAxisAdd)
             .SetLoops(-1)
             .SetEase(Ease.Linear);
+    }
+
+    private void OnDestroy()
+    {
+        transform.DOKill();
     }
 }

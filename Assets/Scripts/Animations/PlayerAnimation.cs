@@ -9,6 +9,8 @@ public class PlayerAnimation : MonoBehaviour
 
     [SerializeField] private PlayerMovement _movement;
 
+    [SerializeField] private Ragdoll _ragdoll;
+
     private void Update()
     {
         _animator.SetFloat("MovementSpeed", _movement.Velocity.z);
@@ -29,5 +31,11 @@ public class PlayerAnimation : MonoBehaviour
     private void OnJumped()
     {
         _animator.SetTrigger("Jump");
+    }
+
+    public void OnDied(Collision collision)
+    {
+        _ragdoll.ActivevateRagdoll();
+        _ragdoll.AddExpolisonForce(10,collision.GetContact(0).point,5);
     }
 }

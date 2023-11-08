@@ -16,6 +16,10 @@ public class Obstacle : MonoBehaviour
             if (hitDot > 0.2f)
             {
                 GameInstance.Instance.Lose();
+                if (collision.rigidbody.TryGetComponent<PlayerAnimation>(out var animation))
+                {
+                    animation.OnDied(collision);
+                }
             }
         }
 

@@ -25,3 +25,5 @@ A game similar to  Subway Surfers, Minion Rush: Running, Temple Run
     >
 - Custom Water Shader Graph
 
+## Gameplay
+![ezgif com-video-to-gif](https://github.com/IMetex/GoldRush/assets/73601795/2369c228-97af-45a4-99ad-25a62c3a8f34)

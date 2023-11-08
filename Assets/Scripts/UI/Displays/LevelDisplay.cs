@@ -24,7 +24,7 @@ public class LevelDisplay : MonoBehaviour
 
     private void UpdateUI(int value)
     {
-        _valueText.text = "Level" + (value + 1);
+        _valueText.text = "Level " + (value + 1);
     }
     private void UpdateUI()
     {

@@ -17,8 +17,7 @@ public class JumpTrajectoryInstantiator : MonoBehaviour
     [SerializeField] private AnimationCurve _curve;
 
     [SerializeField] private bool _useAnimationCurve;
-
-    private List<GameObject> _instanceList = new List<GameObject>();
+    
 
     private void Start()
     {
